@@ -21,6 +21,22 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 """
 
 
+def print_distribution(dist, title, buff_len):
+    """print_distribution
+    Print distribution in a pretty format.
+    Args:
+        dist (list) - Distribution output from calc_distribution
+        title
+    """
+    print("{}\n\tUppercase: {} - {:.2f}%\n\tLowercase: {} - {:.2f}%\n\tDigits: {} - {:.2f}%\n\tOther: {} - {:.2f}%".format(
+        title,
+        dist[0], dist[0]/buff_len*100,
+        dist[1], dist[1]/buff_len*100,
+        dist[2], dist[2]/buff_len*100,
+        dist[3], dist[3]/buff_len*100,
+    ))
+
+
 def calc_distribution(text):
     """calc_distribution
     Calculates the distribution of uppercase, lowercase, digit, and other characters in a text buffer.
@@ -67,39 +83,16 @@ def main():
 
         plain_distribution = calc_distribution(plain_text)
         b64_distribution = calc_distribution(base64_encoded)
-
-        print("{} Plain Text:\n\tUppercase: {} - {:.2f}%\n\tLowercase: {} - {:.2f}%\n\tDigits: {} - {:.2f}%\n\tOther: {} - {:.2f}%".format(
-            title,
-            plain_distribution[0], plain_distribution[0]/len(plain_text)*100,
-            plain_distribution[1], plain_distribution[1]/len(plain_text)*100,
-            plain_distribution[2], plain_distribution[2]/len(plain_text)*100,
-            plain_distribution[3], plain_distribution[3]/len(plain_text)*100,
-        ))
-        print("{} B64 Encoded:\n\tUppercase: {} - {:.2f}%\n\tLowercase: {} - {:.2f}%\n\tDigits: {} - {:.2f}%\n\tOther: {} - {:.2f}%".format(
-            title,
-            b64_distribution[0], b64_distribution[0]/len(base64_encoded)*100,
-            b64_distribution[1], b64_distribution[1]/len(base64_encoded)*100,
-            b64_distribution[2], b64_distribution[2]/len(base64_encoded)*100,
-            b64_distribution[3], b64_distribution[3]/len(base64_encoded)*100,
-        ))
+        
+        print_distribution(plain_distribution, title+' Plain Text:', len(plain_distribution))
+        print_distribution(b64_distribution, title+' Base64 Encoded:', len(b64_distribution))
         print('\n')
 
     plain_distribution = calc_distribution(global_plain)
     b64_distribution = calc_distribution(global_b64)
-    print("{} Plain Text:\n\tUppercase: {} - {:.2f}%\n\tLowercase: {} - {:.2f}%\n\tDigits: {} - {:.2f}%\n\tOther: {} - {:.2f}%".format(
-        'All Books',
-        plain_distribution[0], plain_distribution[0]/len(global_plain)*100,
-        plain_distribution[1], plain_distribution[1]/len(global_plain)*100,
-        plain_distribution[2], plain_distribution[2]/len(global_plain)*100,
-        plain_distribution[3], plain_distribution[3]/len(global_plain)*100,
-    ))
-    print("{} B64 Encoded:\n\tUppercase: {} - {:.2f}%\n\tLowercase: {} - {:.2f}%\n\tDigits: {} - {:.2f}%\n\tOther: {} - {:.2f}%".format(
-        'All Books',
-        b64_distribution[0], b64_distribution[0]/len(global_b64)*100,
-        b64_distribution[1], b64_distribution[1]/len(global_b64)*100,
-        b64_distribution[2], b64_distribution[2]/len(global_b64)*100,
-        b64_distribution[3], b64_distribution[3]/len(global_b64)*100,
-    ))
+
+    print_distribution(plain_distribution, 'All Books Plain Text:', len(plain_distribution))
+    print_distribution(b64_distribution, 'All Books Base64 Encoded:', len(b64_distribution))
 
 
 if __name__ == "__main__":
