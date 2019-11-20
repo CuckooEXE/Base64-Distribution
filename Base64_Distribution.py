@@ -84,15 +84,15 @@ def main():
         plain_distribution = calc_distribution(plain_text)
         b64_distribution = calc_distribution(base64_encoded)
         
-        print_distribution(plain_distribution, title+' Plain Text:', len(plain_distribution))
-        print_distribution(b64_distribution, title+' Base64 Encoded:', len(b64_distribution))
+        print_distribution(plain_distribution, title+' Plain Text:', len(plain_text))
+        print_distribution(b64_distribution, title+' Base64 Encoded:', len(base64_encoded))
         print('\n')
 
     plain_distribution = calc_distribution(global_plain)
     b64_distribution = calc_distribution(global_b64)
 
-    print_distribution(plain_distribution, 'All Books Plain Text:', len(plain_distribution))
-    print_distribution(b64_distribution, 'All Books Base64 Encoded:', len(b64_distribution))
+    print_distribution(plain_distribution, 'All Books Plain Text:', len(global_plain))
+    print_distribution(b64_distribution, 'All Books Base64 Encoded:', len(global_b64))
 
 
 if __name__ == "__main__":
