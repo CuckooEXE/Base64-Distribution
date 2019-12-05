@@ -1,0 +1,70 @@
+Moby Dick Plain Text:
+	Uppercase: 23920 - 1.87%
+	Lowercase: 946565 - 74.17%
+	Digits: 1129 - 0.09%
+	Other: 304587 - 23.87%
+Moby Dick Base64 Encoded:
+	Uppercase: 776820 - 45.65%
+	Lowercase: 746464 - 43.87%
+	Digits: 177485 - 10.43%
+	Other: 835 - 0.05%
+
+
+Pride and Prejudice Plain Text:
+	Uppercase: 14247 - 1.78%
+	Lowercase: 537976 - 67.27%
+	Digits: 418 - 0.05%
+	Other: 247097 - 30.90%
+Pride and Prejudice Base64 Encoded:
+	Uppercase: 514338 - 48.23%
+	Lowercase: 447527 - 41.97%
+	Digits: 104057 - 9.76%
+	Other: 398 - 0.04%
+
+
+Frankenstein Plain Text:
+	Uppercase: 7980 - 1.77%
+	Lowercase: 339931 - 75.41%
+	Digits: 306 - 0.07%
+	Other: 102566 - 22.75%
+Frankenstein Base64 Encoded:
+	Uppercase: 278000 - 46.25%
+	Lowercase: 259565 - 43.19%
+	Digits: 63352 - 10.54%
+	Other: 127 - 0.02%
+
+
+A Modest Proposal Plain Text:
+	Uppercase: 1469 - 3.67%
+	Lowercase: 29762 - 74.36%
+	Digits: 190 - 0.47%
+	Other: 8603 - 21.49%
+A Modest Proposal Base64 Encoded:
+	Uppercase: 24373 - 45.67%
+	Lowercase: 23261 - 43.59%
+	Digits: 5731 - 10.74%
+	Other: 3 - 0.01%
+
+
+A Strange Case of Dr. Jekyll and Hyde Plain Text:
+	Uppercase: 4110 - 2.51%
+	Lowercase: 118644 - 72.58%
+	Digits: 185 - 0.11%
+	Other: 40525 - 24.79%
+A Strange Case of Dr. Jekyll and Hyde Base64 Encoded:
+	Uppercase: 100715 - 46.21%
+	Lowercase: 93794 - 43.03%
+	Digits: 23332 - 10.71%
+	Other: 111 - 0.05%
+
+
+All Books Plain Text:
+	Uppercase: 51726 - 1.89%
+	Lowercase: 1972878 - 72.26%
+	Digits: 2228 - 0.08%
+	Other: 703378 - 25.76%
+All Books Base64 Encoded:
+	Uppercase: 1694246 - 46.54%
+	Lowercase: 1570611 - 43.15%
+	Digits: 373957 - 10.27%
+	Other: 1474 - 0.04%
